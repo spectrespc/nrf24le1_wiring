@@ -238,7 +238,7 @@ void eepromWrite(uint16_t address, uint8_t value);
 w2_ack_nack_val_t wireWrite8(uint8_t slave_address, uint8_t data);
 uint8_t wireRead8(uint8_t slave_address, uint8_t address);
 uint16_t wireRead16(uint8_t slave_address, uint8_t address);
-#define watchdogRun(p1) watchdog_start_and_set_timeout_in_ms(p1);CLKLFCTRL=1
+#define watchdogRun(p1) watchdog_set_wdsv_count(watchdog_calc_timeout_from_ms(p1));watchdog_setup()
 
 unsigned int i = 0;
 unsigned char control_byte, address_byte, data_byte;
