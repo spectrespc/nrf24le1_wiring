@@ -3,7 +3,7 @@
 #define DEBUG 1
 
 void setup(){
-	serialBegin(19200);
+	serialBegin();
 
 	debugPrint("i/o node starting - sender", 0);
 	watchdogRun(1000);
