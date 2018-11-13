@@ -263,7 +263,7 @@ void main(){
 	setup();
 	while(1){loop();}
 }
-
+/*
 void serialBegin(){
 
 	//Set up UART pin
@@ -278,7 +278,7 @@ void serialBegin(){
 
 	//Set up UART
 	uart_configure_8_n_1_38400();
-}
+}*/
 
 
 
